@@ -13,10 +13,11 @@ Properties of a textarea are declared using attributes. Textareas can contain se
 <textarea cols="3">This is a textarea with the attribute cols</texarea>
 ```
 
-Attributes for textarea:  
-####autofocus
-The **autofocus** attribute tells the browser that when the page loads, the textarea receives focus. Giving an element focus makes it active and ready for input. Autofocus is considered a boolean attribute, meaning that adding a boolean attribute with no set value to an element will be percieved by the browser to have its value to true. To represent false, simply omit the attribute. 
+####Types of textarea attributes:
 
+####autofocus
+The **autofocus** attribute tells the browser that when the page loads, the textarea receives focus. Giving an element focus makes it active and ready for input. Autofocus is considered a boolean attribute, meaning that adding a boolean attribute with no set value to an element will be percieved by the browser to have its value set to true. To represent false, simply omit the attribute. 
+ 
 ```html
 // this textarea will have focus on page load
 <textarea autofocus></textarea>
@@ -35,13 +36,13 @@ The **dirname** attribute sends the text direction of the textarea when the form
 <textarea name="myArea" dirname="myArea.dir"></textarea>
 ```
 ####disabled
-The **disabled** attribute is a boolean that indicates whether or not the user can interact with the textarea. A disabled textarea will not be selectable by the user and no value will be submitted with the form. If omitted, this value of this attribute will be inherited from its parent element. When an input is disabled, the background color and font color may be different than normal, depending on the browser.
+The **disabled** attribute is a boolean that indicates whether or not the user can interact with the textarea. A disabled textarea will not be selectable by the user and no value will be submitted with the form. If omitted, the value of this attribute will be inherited from its parent element. When an input is disabled, the background color and font color may be different than normal, depending on the browser.
 ```html
 <textarea disabled></textarea>
 ```
 ![Disabled](http://toddaustin.com/images/mod-dev/disabled-ie.jpg)
 ####form
-The **form** attribute specified the id of the form element that is the parent of, or associated with the textarea. The value must be the ID of a form element that resides in the same document as the textarea. Using this attribute allow the textarea to be placed anywhere on the page, while omitting this attribute requires the texarea to be a descendent of a form element
+The **form** attribute specifies the id of the form element that is the parent of, or associated with the textarea. The value must be the ID of a form element that resides in the same document as the textarea. Using this attribute allows the textarea to be placed anywhere on the page. While omitting this attribute requires the texarea to be a descendent of a form element.
 ```html
 <textarea form="myForm"></textarea>
 ```
@@ -58,13 +59,13 @@ The **name** attribute gives a name to the textarea. This can be used to referen
 <textarea name="myArea"></textarea>
 ```
 ####placeholder
-The **placeholder** attribute allows a suggestion of the type of content to enter into the textarea input. Placeholder text is displayed before the user types in their input. 
+The **placeholder** attribute allows a suggestion for the type of content to be entered into the textarea input. Placeholder text is displayed before the user types in their input. 
 ```html
 <textarea placeholder="This is placeholder text"></textarea>
 ```
 ![placeholder](http://toddaustin.com/images/mod-dev/placeholder.jpg)
 ####readonly
-The **readonly** attribute is a boolean attribute, and its use will disallow modification of the textarea content. Readonly is similar to disabled, but with readonly, the user can still click into and select the content inside the textarea and the textarea value is submitted with the form.
+The **readonly** attribute is a boolean attribute. Its use disallows modification of the textarea content. Readonly is similar to the disabled attribute, but with readonly, the user can still click into and select the content inside the textarea and the textarea value is submitted with the form.
 ```html
 <textarea readonly></textarea>
 ```
@@ -75,14 +76,14 @@ The **required** attribute is a boolean attribute that specifies that the user m
 <textarea required></textarea>
 ```
 ####rows
-The **rows** attribute specifies the height in lines, that is visible, for that textarea. Height can also be specified via CSS, which will override the rows attribute. If omitted, the default row value is 2.
+The **rows** attribute specifies the visible height in lines for that textarea. Height can also be specified via CSS, which will override the rows attribute. If omitted, the default row value is 2.
 ```html
 <textarea rows="40"></textarea>
 ```
 ####wrap
-The **wrap** attribute specifies how the textarea text will wrap when the form is submitted. There are two values that are possible for the wrap attribute. When wrap="hard", linebreaks are added so that each line is no wider than the cols attribute (which must be specified as well). When wrap="soft", the text will not wrap, and no linebreaks are inserted. Soft is the default setting when the wrap attribute is omitted.
+The **wrap** attribute specifies how the textarea text will wrap when the form is submitted. There are two possible values for the wrap attribute. When wrap="hard", linebreaks are added so that each line is no wider than the cols attribute (which must be specified as well). When wrap="soft", the text will not wrap, and no linebreaks are inserted. Soft is the default setting when the wrap attribute is omitted.
 ```html
 <textarea wrap="hard"></textarea>
 ```
-###Textarea's are useful
-The `<textarea>` element is a very useful addition to forms when you want the user to enter long form text such as comments, descriptions or summaries. Using the many attributes available for the textarea element allows for control of the display of the textarea as well as whether it is a required field, how much can be entered as well as whether or not the field can even be utilized by the user.
+###Textareas are useful
+The `<textarea>` element is a very useful addition to forms when you want the user to enter long form text such as comments, descriptions or summaries. Using the many attributes available for the textarea element allows for control of the textarea display as well as whether it is a required field, how much text can be entered, and whether or not the field can even be utilized by the user.
